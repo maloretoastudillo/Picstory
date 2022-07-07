@@ -57,6 +57,10 @@ class StoriesController < ApplicationController
     end
   end
 
+  def mypicstories
+    @stories = current_user.stories
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_story
